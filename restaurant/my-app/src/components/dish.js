@@ -34,7 +34,7 @@ class Dish extends Component {
         return (
             <div className="dish">
                 <h1> {this.props.name} </h1>
-                <h3>Total ingredients</h3>
+                <h3>{this.countIngredients()}</h3>
                 <ul>
                     {this.ingredients.map(ingredient =>(
                         <li>{ingredient}</li>
@@ -43,7 +43,6 @@ class Dish extends Component {
                             <li>{key}</li>
                     ))}          
                 </ul>
-                <h3>{this.countIngredients()}</h3>
                 <Button variant="contained" color="primary"> Send </Button>
             </div>
         )
