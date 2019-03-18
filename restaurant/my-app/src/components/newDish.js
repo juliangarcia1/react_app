@@ -6,14 +6,11 @@ import AddIcon from '@material-ui/icons/Add';
 
 class NewDish extends Component {
 
-    // constructor() {
-    //     super();
-    //     this.addDish = this.addDish.bind(this);
-    // }
+    newDish = React.createRef();
     addDish = (event) => {
         console.log('Add dish');
         event.preventDefault(); // Avoid reload the webpage and clean text fields, etc.
-        console.log(this)
+        console.log(this.newDish.value)
     }
     render(){
         // console.log(this);
@@ -24,6 +21,7 @@ class NewDish extends Component {
                     type="text"
                     margin="normal"
                     variant="outlined"
+                    inputRef={e =>(this.newDish = e)}
                 />
                 <Fab color="primary" size="medium"
                     className="dish-form-icon" onClick={this.addDish}>
