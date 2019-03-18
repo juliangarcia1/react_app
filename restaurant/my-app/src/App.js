@@ -20,7 +20,8 @@ class App extends Component {
         Yo como {this.dish}
         <ul>
           {
-            this.dishes.map(dish=><li>{dish}</li>)
+            this.dishes.map((dish, index)=>(
+              <li key={index}>{dish}</li>))
           }
         </ul>
       </div>
