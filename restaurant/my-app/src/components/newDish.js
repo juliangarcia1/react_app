@@ -6,11 +6,11 @@ import AddIcon from '@material-ui/icons/Add';
 
 class NewDish extends Component {
 
-    constructor() {
-        super();
-        this.addDish = this.addDish.bind(this);
-    }
-    addDish(event) {
+    // constructor() {
+    //     super();
+    //     this.addDish = this.addDish.bind(this);
+    // }
+    addDish = (event) => {
         console.log('Add dish');
         event.preventDefault(); // Avoid reload the webpage and clean text fields, etc.
         console.log(this)
