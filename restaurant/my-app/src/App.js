@@ -4,6 +4,7 @@ import Header from './components/header';
 import Dish from './components/dish';
 
 import './styles/App.css';
+import NewDish from './components/newDish';
 // import  './styles/dish.css'; //This should be here because if in one component ti is import to all app anyway
 
 
@@ -14,6 +15,7 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
+        <NewDish/>
         <Dish name={this.dish} quantity="3"/>
         Yo como {this.dish}
         <ul>
