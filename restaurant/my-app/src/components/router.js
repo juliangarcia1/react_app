@@ -13,6 +13,7 @@ const Router = () => (
         <Route path="/dishes" component={Dishes}/>
         <Route path="/dish/:name" component={Dish}/>
         <Route path="/countries" component={Countries}/>
+        <Route component={NotFound}/>
     </Switch>
     </BrowserRouter>
 )
