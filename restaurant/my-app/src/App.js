@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
-import Header from './components/header'
-import Dish, {Flag, Ingredient} from './components/dish'
+import Header from './components/header';
+import Dish from './components/dish';
 
 import './styles/App.css';
 // import  './styles/dish.css'; //This should be here because if in one component ti is import to all app anyway
