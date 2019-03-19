@@ -25,14 +25,6 @@ class App extends Component {
         color="secondary" onClick={this.showDishes}>
         Elegir
         </Button>
-        {/* <Dish name={this.dish} quantity="3"/>
-        Yo como {this.dish} */}
-        <ul>
-          {
-            this.dishes.map((dish, index)=>(
-              <li key={index}>{dish}</li>))
-          }
-        </ul>
       </div>
     );
   }
