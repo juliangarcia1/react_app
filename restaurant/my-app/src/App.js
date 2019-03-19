@@ -5,6 +5,8 @@ import Header from './components/header';
 import NewDish from './components/newDish';
 import Dishes from './components/dishes'
 
+import data from './assets/data/dishes.json'
+
 import './styles/App.css';
 // import  './styles/dish.css'; //This should be here because if in one component ti is import to all app anyway
 
