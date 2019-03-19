@@ -5,11 +5,13 @@ import {
     ListItem,
     ListSubheader, 
     ListItemText, 
-    ListItemIcon
+    ListItemIcon,
+    GridList,
+    GridListTile
 
 } from '@material-ui/core';
 import Restaurant from '@material-ui/icons/Restaurant'
-
+import Dish from './dish';
 
 import data from '../assets/data/dishes.json'
 
@@ -35,7 +37,7 @@ export class Dishes extends Component {
                     </div>
                 )))
                 } */}
-                <List
+                {/* <List
                     component="nav"
                     subheader={ <ListSubheader
                                     component="div">Dishes</ListSubheader>
@@ -50,7 +52,13 @@ export class Dishes extends Component {
                     </ListItem>
                     ))
                 }
-                </List>
+                </List> */}
+                <GridList>
+                   {data.dishes.map((dish, index) => (
+                        <Dish key={index} name={dish.name}
+                            ingredients={dish.ingredients} />
+                    ))}
+                </GridList>
             </div>
         );
     }
