@@ -11,7 +11,7 @@ export class Dishes extends Component {
         return (
             <div>
                 <GridList>
-                   {data.dishes.map((dish, index) => (
+                   {this.props.data.map((dish, index) => (
                         <Dish key={index} name={dish.name}
                             ingredients={dish.ingredients} />
                     ))}
