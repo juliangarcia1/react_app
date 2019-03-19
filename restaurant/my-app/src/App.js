@@ -12,8 +12,11 @@ import './styles/App.css';
 
 
 class App extends Component {
-  dish = "tacos";
-  dishes =["Tacos", "Ceviche", "Paella"] 
+  state = {
+    dish: "tacos",
+    dishes: data
+  };
+
   showDishes = e => {
     e.preventDefault();
     this.props.history.push("/dishes")
@@ -23,10 +26,7 @@ class App extends Component {
       <div className="App">
         <Header />
         <NewDish/>
-        <Button variant="contained"
-        color="secondary" onClick={this.showDishes}>
-        Elegir
-        </Button>
+        <Dishes data={this.state.dishes} />
       </div>
     );
   }
