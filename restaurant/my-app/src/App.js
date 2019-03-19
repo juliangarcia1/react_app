@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import Button from '@material-ui/core/Button'
 
 import Header from './components/header';
-import Dish from './components/dish';
 import NewDish from './components/newDish';
+import Dishes from './components/dishes'
 
 import './styles/App.css';
 // import  './styles/dish.css'; //This should be here because if in one component ti is import to all app anyway
