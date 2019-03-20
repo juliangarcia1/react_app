@@ -5,10 +5,13 @@ import { Card,
          ListItem,
          ListItemIcon, 
          ListItemText,
-         ListSubheader}
+         ListSubheader,
+         TextField, 
+         IconButton
+         }
 from '@material-ui/core';
-
 import ScatterPlot from '@material-ui/icons/ScatterPlot';
+import Edit from '@material-ui/icons/Edit';
 
 export class Flag extends Component {
     render() {
@@ -33,6 +36,21 @@ export class Ingredient extends Component {
 }
 
 class Dish extends Component {
+    state ={
+        edit: false,
+        name: this.props.name
+    };
+
+    edit = e => {
+        this.setState({
+            edit: !this.state.edit
+        });
+    };
+    handleChange = e => {
+        let newState = {...this.state};
+        newState.name = e.currentTarget.value;
+        this.setState(newState);
+    };
 
     render() {
         // const { params } = this.props.match
@@ -44,7 +62,24 @@ class Dish extends Component {
                             component="nav"
                             subheader={
                                 <ListSubheader component="div">
-                                    {this.props.name}
+                                    {/* {this.props.name} */}
+                                    {this.state.edit ? (
+                                        <TextField 
+                                            label="Platillo..."
+                                            type="text"
+                                            margin="normal"
+                                            variant="outlined"
+                                            value={this.state.name}
+                                            onChange={this.handleChange}
+                                        />
+                                    )
+                                    :
+                                    (
+                                        this.props.name
+                                    )}
+                                    <IconButton size="small" onClick={this.edit}>
+                                        <Edit />
+                                    </IconButton>
                                 </ListSubheader>
                             }
                         >
