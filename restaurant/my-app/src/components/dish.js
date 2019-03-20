@@ -33,11 +33,6 @@ export class Ingredient extends Component {
 }
 
 class Dish extends Component {
-    ingredients = ["Tortilla", "Carne", "Cebolla"];
-    ingredientes = {uno:"1", dos:"2"};
-    countIngredients() {
-        return this.ingredients.length;
-    }
 
     render() {
         // const { params } = this.props.match
