@@ -50,6 +50,7 @@ class Dish extends Component {
         let newState = {...this.state};
         newState.name = e.currentTarget.value;
         this.setState(newState);
+        this.props.onUpdateDish(this.props.index, newState.name);
     };
 
     render() {
